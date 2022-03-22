@@ -6,6 +6,6 @@ target 'reboot' do
   use_frameworks!
 
   # Pods for reboot
-  # pod 'lottie-ios'
+  pod 'lottie-ios'
 
 end

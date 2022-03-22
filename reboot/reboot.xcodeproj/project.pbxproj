@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40E646263721A18420246146 /* Pods_reboot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357EC98A1D6DC208AF493018 /* Pods_reboot.framework */; };
 		7269CAC527E959AE002051EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269CAC427E959AE002051EA /* AppDelegate.swift */; };
 		7269CAC727E959AE002051EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269CAC627E959AE002051EA /* SceneDelegate.swift */; };
 		7269CAC927E959AE002051EA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269CAC827E959AE002051EA /* MainViewController.swift */; };
 		7269CACC27E959AE002051EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7269CACA27E959AE002051EA /* Main.storyboard */; };
 		7269CACE27E959B1002051EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7269CACD27E959B1002051EA /* Assets.xcassets */; };
 		7269CAD127E959B1002051EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7269CACF27E959B1002051EA /* LaunchScreen.storyboard */; };
+		7269CADA27E96704002051EA /* gaonashi.json in Resources */ = {isa = PBXBuildFile; fileRef = 7269CAD927E96704002051EA /* gaonashi.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		357EC98A1D6DC208AF493018 /* Pods_reboot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reboot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7269CAC127E959AE002051EA /* reboot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reboot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7269CAC427E959AE002051EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7269CAC627E959AE002051EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,10 @@
 		7269CACD27E959B1002051EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7269CAD027E959B1002051EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7269CAD227E959B1002051EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7269CAD927E96704002051EA /* gaonashi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = gaonashi.json; path = ../../../../../../Downloads/gaonashi.json; sourceTree = "<group>"; };
+		72E4285D27E96A680065C0BF /* 99362-animation-no-face.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "99362-animation-no-face.json"; sourceTree = "<group>"; };
+		81E8A2D8BBA5FC38D8912A7A /* Pods-reboot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reboot.debug.xcconfig"; path = "Target Support Files/Pods-reboot/Pods-reboot.debug.xcconfig"; sourceTree = "<group>"; };
+		E8229273D616823AD6108833 /* Pods-reboot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reboot.release.xcconfig"; path = "Target Support Files/Pods-reboot/Pods-reboot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40E646263721A18420246146 /* Pods_reboot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		647B2E66E75483D7D232B36F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				357EC98A1D6DC208AF493018 /* Pods_reboot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7269CAB827E959AE002051EA = {
 			isa = PBXGroup;
 			children = (
 				7269CAC327E959AE002051EA /* reboot */,
 				7269CAC227E959AE002051EA /* Products */,
+				EFD5258429645E032E4DA75C /* Pods */,
+				647B2E66E75483D7D232B36F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +74,7 @@
 		7269CAC327E959AE002051EA /* reboot */ = {
 			isa = PBXGroup;
 			children = (
+				7269CAD927E96704002051EA /* gaonashi.json */,
 				7269CAD827E95C52002051EA /* ViewControllers */,
 				7269CAC427E959AE002051EA /* AppDelegate.swift */,
 				7269CAC627E959AE002051EA /* SceneDelegate.swift */,
@@ -71,8 +90,18 @@
 			isa = PBXGroup;
 			children = (
 				7269CAC827E959AE002051EA /* MainViewController.swift */,
+				72E4285D27E96A680065C0BF /* 99362-animation-no-face.json */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EFD5258429645E032E4DA75C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81E8A2D8BBA5FC38D8912A7A /* Pods-reboot.debug.xcconfig */,
+				E8229273D616823AD6108833 /* Pods-reboot.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7269CAD527E959B1002051EA /* Build configuration list for PBXNativeTarget "reboot" */;
 			buildPhases = (
+				BC6E543BD86BEC116FD04F17 /* [CP] Check Pods Manifest.lock */,
 				7269CABD27E959AE002051EA /* Sources */,
 				7269CABE27E959AE002051EA /* Frameworks */,
 				7269CABF27E959AE002051EA /* Resources */,
+				34EC4AF5AFB0B509B0DAEEAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +164,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7269CADA27E96704002051EA /* gaonashi.json in Resources */,
 				7269CAD127E959B1002051EA /* LaunchScreen.storyboard in Resources */,
 				7269CACE27E959B1002051EA /* Assets.xcassets in Resources */,
 				7269CACC27E959AE002051EA /* Main.storyboard in Resources */,
@@ -140,6 +172,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34EC4AF5AFB0B509B0DAEEAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reboot/Pods-reboot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reboot/Pods-reboot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reboot/Pods-reboot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC6E543BD86BEC116FD04F17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reboot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7269CABD27E959AE002051EA /* Sources */ = {
@@ -290,6 +364,7 @@
 		};
 		7269CAD627E959B1002051EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81E8A2D8BBA5FC38D8912A7A /* Pods-reboot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +393,7 @@
 		};
 		7269CAD727E959B1002051EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8229273D616823AD6108833 /* Pods-reboot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

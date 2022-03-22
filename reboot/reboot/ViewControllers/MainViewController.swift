@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class MainViewController: UIViewController {
     //제목
@@ -29,22 +30,49 @@ class MainViewController: UIViewController {
         return label
     }()
     
+    let animationView: AnimationView = {
+        let animView = AnimationView(name: "gaonashi")
+        animView.frame = CGRect(x:0,y:0,width:400,height:400)
+        animView.contentMode = .scaleAspectFill
+        
+        return animView
+    }()
+    
     //뷰가 생성이 되었을 때
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
+        view.backgroundColor = .black
+        view.addSubview(animationView)
+        animationView.center = view.center
+       
+        //애니메이션 실행
+        animationView.play{ (finish) in
+            print("end of animation")
+            
+            //애니메이션 지움
+            self.animationView.removeFromSuperview()
+            
+            self.view.backgroundColor = .lightGray
+            self.view.addSubview(self.titleLabel)
+            
+            self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+            self.titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+            self.titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+            
+            self.view.addSubview(self.secondLabel)
+            self.secondLabel.translatesAutoresizingMaskIntoConstraints = false
+            self.secondLabel.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+            self.secondLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+            
+        }
         
-        view.backgroundColor = .lightGray
-        view.addSubview(titleLabel)
+
         
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
-        view.addSubview(secondLabel)
-        secondLabel.translatesAutoresizingMaskIntoConstraints = false
-        secondLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        secondLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+
+        
     }
 
 

@@ -1,0 +1,6 @@
+framework module Pods_reboot {
+  umbrella header "Pods-reboot-umbrella.h"
+
+  export *
+  module * { export * }
+}
