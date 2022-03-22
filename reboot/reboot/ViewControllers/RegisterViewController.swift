@@ -13,7 +13,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         //상단 네비게이션 부분을 숨김처리
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = false
         
     }
     

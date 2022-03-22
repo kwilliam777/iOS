@@ -10,11 +10,12 @@
 		40E646263721A18420246146 /* Pods_reboot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 357EC98A1D6DC208AF493018 /* Pods_reboot.framework */; };
 		7269CAC527E959AE002051EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269CAC427E959AE002051EA /* AppDelegate.swift */; };
 		7269CAC727E959AE002051EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269CAC627E959AE002051EA /* SceneDelegate.swift */; };
-		7269CAC927E959AE002051EA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269CAC827E959AE002051EA /* MainViewController.swift */; };
+		7269CAC927E959AE002051EA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7269CAC827E959AE002051EA /* LoginViewController.swift */; };
 		7269CACC27E959AE002051EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7269CACA27E959AE002051EA /* Main.storyboard */; };
 		7269CACE27E959B1002051EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7269CACD27E959B1002051EA /* Assets.xcassets */; };
 		7269CAD127E959B1002051EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7269CACF27E959B1002051EA /* LaunchScreen.storyboard */; };
 		7269CADA27E96704002051EA /* gaonashi.json in Resources */ = {isa = PBXBuildFile; fileRef = 7269CAD927E96704002051EA /* gaonashi.json */; };
+		729AB36127EA6CA1003AA796 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729AB36027EA6CA1003AA796 /* MainViewController.swift */; };
 		72E4286027E978D10065C0BF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E4285F27E978D10065C0BF /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,12 +24,13 @@
 		7269CAC127E959AE002051EA /* reboot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reboot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7269CAC427E959AE002051EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7269CAC627E959AE002051EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7269CAC827E959AE002051EA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7269CAC827E959AE002051EA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7269CACB27E959AE002051EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7269CACD27E959B1002051EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7269CAD027E959B1002051EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7269CAD227E959B1002051EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7269CAD927E96704002051EA /* gaonashi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = gaonashi.json; path = ../../../../../../Downloads/gaonashi.json; sourceTree = "<group>"; };
+		729AB36027EA6CA1003AA796 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		72E4285F27E978D10065C0BF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		81E8A2D8BBA5FC38D8912A7A /* Pods-reboot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reboot.debug.xcconfig"; path = "Target Support Files/Pods-reboot/Pods-reboot.debug.xcconfig"; sourceTree = "<group>"; };
 		E8229273D616823AD6108833 /* Pods-reboot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reboot.release.xcconfig"; path = "Target Support Files/Pods-reboot/Pods-reboot.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,8 +92,9 @@
 		7269CAD827E95C52002051EA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7269CAC827E959AE002051EA /* MainViewController.swift */,
+				7269CAC827E959AE002051EA /* LoginViewController.swift */,
 				72E4285F27E978D10065C0BF /* RegisterViewController.swift */,
+				729AB36027EA6CA1003AA796 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -221,10 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7269CAC927E959AE002051EA /* MainViewController.swift in Sources */,
+				7269CAC927E959AE002051EA /* LoginViewController.swift in Sources */,
 				7269CAC527E959AE002051EA /* AppDelegate.swift in Sources */,
 				7269CAC727E959AE002051EA /* SceneDelegate.swift in Sources */,
 				72E4286027E978D10065C0BF /* RegisterViewController.swift in Sources */,
+				729AB36127EA6CA1003AA796 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

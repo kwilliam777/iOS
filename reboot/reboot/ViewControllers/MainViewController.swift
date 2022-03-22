@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  reboot
 //
-//  Created by 김응진 on 2022/03/21.
+//  Created by 김응진 on 2022/03/22.
 //
 
 import UIKit
@@ -12,71 +12,56 @@ class MainViewController: UIViewController {
     //제목
     var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "center"
+        label.text = "Main View"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 50)
-        label.textColor = .blue
-        
+        label.textColor = UIColor.white
         return label
     }()
     
-    let secondLabel: UILabel = {
-        let label = UILabel()
-        label.text = "this is bottom"
-        label.textColor = .black
-        label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 50)
+    let changeBtn: UIButton = {
+        let btn = UIButton(type: .system)
+        btn.setTitle("배경색 바꿔라", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        btn.backgroundColor = UIColor.white
+        btn.layer.cornerRadius = 5
+        btn.contentEdgeInsets = UIEdgeInsets(top:5, left:20, bottom:5, right:20)
+        btn.addTarget(self, action: #selector(changeBG), for: .touchUpInside)
         
-        return label
+        return btn
     }()
     
-    let animationView: AnimationView = {
-        let animView = AnimationView(name: "gaonashi")
-        animView.frame = CGRect(x:0,y:0,width:400,height:400)
-        animView.contentMode = .scaleAspectFill
-        
-        return animView
-    }()
+    var isBGorange: Bool?
     
-    
-    //뷰가 생성이 되었을 때
+    //뷰 생성
     override func viewDidLoad() {
         super.viewDidLoad()
+        isBGorange = true
+        view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        
+        view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        view.addSubview(changeBtn)
+        changeBtn.translatesAutoresizingMaskIntoConstraints = false
+        changeBtn.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+        changeBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     
-//        view.backgroundColor = .black
-        view.addSubview(animationView)
-        animationView.center = view.center
-       
-        //애니메이션 실행
-        animationView.play{ (finish) in
-            print("end of animation")
-            
-            //애니메이션 지움
-            self.animationView.removeFromSuperview()
-            
-            self.navigationController?.isNavigationBarHidden = true
-            
-//            self.view.backgroundColor = .lightGray
-            
-//            self.view.addSubview(self.titleLabel)
-//            self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
-//            self.titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//            self.titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//
-//            self.view.addSubview(self.secondLabel)
-//            self.secondLabel.translatesAutoresizingMaskIntoConstraints = false
-//            self.secondLabel.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-//            self.secondLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-            
-        }
-        
-
-        
-        
-
-        
     }
-
-
+    
+    //배경색을 바꾼다
+    @objc fileprivate func changeBG() {
+        
+        if isBGorange == true {
+            view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+            isBGorange = false
+        } else {
+            view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+            isBGorange = true
+        }
+        print("mainViewController - changeBT \(isBGorange)")
+    }
 }
-
