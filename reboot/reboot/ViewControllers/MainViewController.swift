@@ -38,12 +38,12 @@ class MainViewController: UIViewController {
         return animView
     }()
     
+    
     //뷰가 생성이 되었을 때
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     
-        view.backgroundColor = .black
+//        view.backgroundColor = .black
         view.addSubview(animationView)
         animationView.center = view.center
        
@@ -54,17 +54,19 @@ class MainViewController: UIViewController {
             //애니메이션 지움
             self.animationView.removeFromSuperview()
             
-            self.view.backgroundColor = .lightGray
-            self.view.addSubview(self.titleLabel)
+            self.navigationController?.isNavigationBarHidden = true
             
-            self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
-            self.titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-            self.titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//            self.view.backgroundColor = .lightGray
             
-            self.view.addSubview(self.secondLabel)
-            self.secondLabel.translatesAutoresizingMaskIntoConstraints = false
-            self.secondLabel.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-            self.secondLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//            self.view.addSubview(self.titleLabel)
+//            self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//            self.titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//            self.titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+//
+//            self.view.addSubview(self.secondLabel)
+//            self.secondLabel.translatesAutoresizingMaskIntoConstraints = false
+//            self.secondLabel.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+//            self.secondLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
             
         }
         
