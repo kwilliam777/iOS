@@ -25,15 +25,19 @@ class ViewController: UIViewController {
     )
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.title = "스토리보드 없이 시작하기"
+//        self.view.backgroundColor = .systemGray
+        
         
         view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         notchGradientLoadingBar.fadeIn()
+        
         load(completion: {result in
             print(result)
             self.label.text = result
