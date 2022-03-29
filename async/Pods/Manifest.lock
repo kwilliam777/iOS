@@ -1,0 +1,20 @@
+PODS:
+  - GradientLoadingBar (2.2.5):
+    - LightweightObservable (~> 2.1)
+  - LightweightObservable (2.2.0)
+
+DEPENDENCIES:
+  - GradientLoadingBar (~> 2.0)
+
+SPEC REPOS:
+  trunk:
+    - GradientLoadingBar
+    - LightweightObservable
+
+SPEC CHECKSUMS:
+  GradientLoadingBar: e7813a92e69c23045d033ae4305252c6c975f608
+  LightweightObservable: a4fce3323002aa57234f3cf5524eecb144cc781f
+
+PODFILE CHECKSUM: dded7e90497780cad9dd95194b5efad2ec1020cf
+
+COCOAPODS: 1.11.3
