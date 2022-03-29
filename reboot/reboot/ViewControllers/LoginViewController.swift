@@ -7,8 +7,9 @@
 
 import UIKit
 import Lottie
+import GoogleMobileAds
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,GADBannerViewDelegate {
     
     @IBOutlet weak var loginBtn: UIButton!
     
@@ -37,15 +38,27 @@ class LoginViewController: UIViewController {
         let animView = AnimationView(name: "gaonashi")
         animView.frame = CGRect(x:0,y:0,width:400,height:400)
         animView.contentMode = .scaleAspectFill
-        
+
         return animView
     }()
     
     
     //뷰가 생성이 되었을 때
     override func viewDidLoad() {
+        var bannerView: GADBannerView!
         super.viewDidLoad()
-    
+        
+        self.navigationController?.isNavigationBarHidden = true
+        
+        // In this case, we instantiate the banner with desired ad size.
+         bannerView = GADBannerView(adSize: GADAdSizeBanner)
+
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-7470137966205402/1907909622"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
+        
 //        view.backgroundColor = .black
         view.addSubview(animationView)
         animationView.center = view.center
@@ -56,9 +69,6 @@ class LoginViewController: UIViewController {
             
             //애니메이션 지움
             self.animationView.removeFromSuperview()
-            
-            self.navigationController?.isNavigationBarHidden = true
-            
             
             
 //            self.view.backgroundColor = .lightGray
@@ -76,6 +86,27 @@ class LoginViewController: UIViewController {
         }
         loginBtn.addTarget(self, action: #selector(moveToMainViewController), for: .touchUpInside)
 
+        func addBannerViewToView(_ bannerView: GADBannerView) {
+            bannerView.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(bannerView)
+            view.addConstraints(
+              [NSLayoutConstraint(item: bannerView,
+                                  attribute: .bottom,
+                                  relatedBy: .equal,
+                                  toItem: bottomLayoutGuide,
+                                  attribute: .top,
+                                  multiplier: 1,
+                                  constant: 0),
+               NSLayoutConstraint(item: bannerView,
+                                  attribute: .centerX,
+                                  relatedBy: .equal,
+                                  toItem: view,
+                                  attribute: .centerX,
+                                  multiplier: 1,
+                                  constant: 0)
+              ])
+           }
+        
     }
     @objc fileprivate func moveToMainViewController() {
         print("LoginViewController - moveToMainViewController called")
@@ -83,5 +114,30 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(mainViewController, animated: true)
     }
 
+    //MARK: - GADBannerViewDelegate
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print("bannerViewDidReceiveAd")
+    }
+
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
+      print("bannerViewDidRecordImpression")
+    }
+
+    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print("bannerViewWillPresentScreen")
+    }
+
+    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print("bannerViewWillDIsmissScreen")
+    }
+
+    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print("bannerViewDidDismissScreen")
+    }
+    
 }
 
