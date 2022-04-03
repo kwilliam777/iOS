@@ -1,0 +1,43 @@
+//
+//  ViewController.swift
+//  CustomPopUp
+//
+//  Created by 김응진 on 2022/04/02.
+//
+
+import UIKit
+import WebKit
+
+class ViewController: UIViewController {
+
+    @IBOutlet weak var myWebView: WKWebView!
+    @IBOutlet weak var createPopUpBtn: UIButton!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+    @IBAction func createPopUpBtclicked(_ sender: UIButton) {
+        print("ViewController - CPUBT")
+        
+        // 스토리보드 가져오기
+        let storyboard = UIStoryboard.init(name: "PopUp", bundle: nil)
+        // 스토리보드를 통해서 뷰컨트롤러 가져오기
+        let customPopUpVC = storyboard.instantiateViewController(withIdentifier: "AlertPopUpVC") as! CustomPopUpViewController
+        // 뷰 컨트롤러가 보여지는 스타일
+        customPopUpVC.modalPresentationStyle = .overCurrentContext
+        // 뷰 컨트롤러가 사라지는 스타일
+        customPopUpVC.modalTransitionStyle = .crossDissolve
+        
+        customPopUpVC.learnMoreBtCompletionClosure = {
+            print("컴플리션 블럭 호출")
+            self.createPopUpBtn.isHidden = true
+            let myChannelUrl = URL(string: "https://kwilliam777.github.io/devportfolio/")
+            self.myWebView.load(URLRequest(url:myChannelUrl!))
+        }
+        
+        self.present(customPopUpVC,animated: true, completion: nil)
+    }
+}
+
