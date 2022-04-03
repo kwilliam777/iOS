@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkE-Sm-vsK" userLabel="contentView">
-                                <rect key="frame" x="82" y="298" width="250" height="300"/>
+                                <rect key="frame" x="82" y="248" width="250" height="400"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ktn-f7-Stn">
                                         <rect key="frame" x="65" y="20" width="120" height="120"/>
@@ -36,45 +36,65 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요! 반가워요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Td8-I7-DiZ">
-                                        <rect key="frame" x="51.5" y="150" width="147" height="21"/>
+                                        <rect key="frame" x="52" y="150" width="146.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="저 좀 데려가세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVA-cp-Gy0">
-                                        <rect key="frame" x="66.5" y="179" width="117" height="21"/>
+                                        <rect key="frame" x="67" y="178.5" width="116.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-Hd-mXg">
-                                        <rect key="frame" x="65" y="234" width="120" height="29"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="l5E-2I-Fmn"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="더 알아보기">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
-                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="learnMoreClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0E2-ey-SkA"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cMh-Jx-JDT">
+                                        <rect key="frame" x="65" y="305" width="120" height="67"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-6N-i6A">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="28.5"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="zUT-xW-IzS"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="facebook">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="fbBtClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="K4L-F5-8fy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-Hd-mXg">
+                                                <rect key="frame" x="0.0" y="38.5" width="120" height="28.5"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="l5E-2I-Fmn"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="About me!">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="12"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="learnMoreClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0E2-ey-SkA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Td8-I7-DiZ" firstAttribute="top" secondItem="Ktn-f7-Stn" secondAttribute="bottom" constant="10" id="1Z8-PR-3e2"/>
                                     <constraint firstItem="DVA-cp-Gy0" firstAttribute="centerX" secondItem="SkE-Sm-vsK" secondAttribute="centerX" id="9OL-PU-iHB"/>
-                                    <constraint firstAttribute="height" constant="300" id="Iy2-PF-v7Z"/>
+                                    <constraint firstAttribute="height" constant="400" id="Iy2-PF-v7Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="cMh-Jx-JDT" secondAttribute="bottom" constant="28" id="Q8N-Gb-NZS"/>
                                     <constraint firstItem="Ktn-f7-Stn" firstAttribute="top" secondItem="SkE-Sm-vsK" secondAttribute="top" constant="20" id="ZeT-sA-vHi"/>
                                     <constraint firstItem="Ktn-f7-Stn" firstAttribute="centerX" secondItem="SkE-Sm-vsK" secondAttribute="centerX" id="ecY-gf-W73"/>
-                                    <constraint firstItem="rfV-Hd-mXg" firstAttribute="centerX" secondItem="SkE-Sm-vsK" secondAttribute="centerX" id="iRM-4K-e53"/>
                                     <constraint firstItem="Td8-I7-DiZ" firstAttribute="centerX" secondItem="SkE-Sm-vsK" secondAttribute="centerX" id="lfZ-ve-8NU"/>
                                     <constraint firstAttribute="width" constant="250" id="tE1-5S-VVL"/>
+                                    <constraint firstItem="cMh-Jx-JDT" firstAttribute="centerX" secondItem="SkE-Sm-vsK" secondAttribute="centerX" id="wEf-jL-1bV"/>
                                     <constraint firstItem="DVA-cp-Gy0" firstAttribute="top" secondItem="Td8-I7-DiZ" secondAttribute="bottom" constant="8" id="wh3-V2-Bfq"/>
-                                    <constraint firstAttribute="bottom" secondItem="rfV-Hd-mXg" secondAttribute="bottom" constant="37" id="ze9-Dc-Hfb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -92,6 +112,7 @@
                     <connections>
                         <outlet property="bgBt" destination="NHi-ca-IWn" id="vzz-Bs-A2c"/>
                         <outlet property="contentView" destination="SkE-Sm-vsK" id="9uF-Pa-YrL"/>
+                        <outlet property="facebookBt" destination="9WG-6N-i6A" id="1Y6-u4-9hP"/>
                         <outlet property="learnMoreBt" destination="rfV-Hd-mXg" id="JJW-Mm-dqv"/>
                     </connections>
                 </viewController>
@@ -104,6 +125,9 @@
         <image name="myImage" width="858" height="1266"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

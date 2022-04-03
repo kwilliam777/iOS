@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "63895EA5-3FC2-4103-8F48-54E41791D244"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04D78373-2DC5-4083-A718-73A1091132B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CustomPopUp/CustomPopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "CustomPopUpViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "04D78373-2DC5-4083-A718-73A1091132B4 - 18273de1b5f8ee81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomPopUp.CustomPopUpViewController.bgBt.getter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "CustomPopUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/CustomPopUp/CustomPopUp/CustomPopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "04D78373-2DC5-4083-A718-73A1091132B4 - 34889549360ebef5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomPopUp.CustomPopUpViewController.bgBt.setter : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "CustomPopUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/CustomPopUp/CustomPopUp/CustomPopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "04D78373-2DC5-4083-A718-73A1091132B4 - 76dbf7343bdd4282"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomPopUp.CustomPopUpViewController.bgBt.modify : Swift.Optional&lt;__C.UIButton&gt;"
+                  moduleName = "CustomPopUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/CustomPopUp/CustomPopUp/CustomPopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "04D78373-2DC5-4083-A718-73A1091132B4 - a2201a683e4b231d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomPopUp.CustomPopUpViewController.bgBt.modify : Swift.Optional&lt;__C.UIButton&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CustomPopUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/CustomPopUp/CustomPopUp/CustomPopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "04D78373-2DC5-4083-A718-73A1091132B4 - f06f63eef5897f02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomPopUp.CustomPopUpViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CustomPopUp.CustomPopUpViewController"
+                  moduleName = "CustomPopUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/CustomPopUp/CustomPopUp/CustomPopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "04D78373-2DC5-4083-A718-73A1091132B4 - 611c8771fe876fa6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CustomPopUp.CustomPopUpViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CustomPopUp.CustomPopUpViewController&gt;"
+                  moduleName = "CustomPopUp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/CustomPopUp/CustomPopUp/CustomPopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

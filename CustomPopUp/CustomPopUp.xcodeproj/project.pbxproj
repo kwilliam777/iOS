@@ -16,6 +16,7 @@
 		728DB1F827F924CB0091E7D3 /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 728DB1F727F924CB0091E7D3 /* PopUp.storyboard */; };
 		728DB1FA27F927520091E7D3 /* CustomPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728DB1F927F927520091E7D3 /* CustomPopUpViewController.swift */; };
 		728DB1FD27F92A0B0091E7D3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728DB1FC27F92A0B0091E7D3 /* WebKit.framework */; };
+		728DB1FF27F93AD10091E7D3 /* PopUpDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728DB1FE27F93AD10091E7D3 /* PopUpDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		728DB1F727F924CB0091E7D3 /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
 		728DB1F927F927520091E7D3 /* CustomPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopUpViewController.swift; sourceTree = "<group>"; };
 		728DB1FC27F92A0B0091E7D3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		728DB1FE27F93AD10091E7D3 /* PopUpDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				728DB1EA27F923A80091E7D3 /* Assets.xcassets */,
 				728DB1EC27F923A80091E7D3 /* LaunchScreen.storyboard */,
 				728DB1EF27F923A80091E7D3 /* Info.plist */,
+				728DB1FE27F93AD10091E7D3 /* PopUpDelegate.swift */,
 			);
 			path = CustomPopUp;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				728DB1FF27F93AD10091E7D3 /* PopUpDelegate.swift in Sources */,
 				728DB1FA27F927520091E7D3 /* CustomPopUpViewController.swift in Sources */,
 				728DB1E627F923A70091E7D3 /* ViewController.swift in Sources */,
 				728DB1E227F923A70091E7D3 /* AppDelegate.swift in Sources */,

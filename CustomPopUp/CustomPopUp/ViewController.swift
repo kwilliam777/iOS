@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,PopUpDelegate {
 
     @IBOutlet weak var myWebView: WKWebView!
     @IBOutlet weak var createPopUpBtn: UIButton!
@@ -37,7 +37,16 @@ class ViewController: UIViewController {
             self.myWebView.load(URLRequest(url:myChannelUrl!))
         }
         
+        customPopUpVC.myPopUpDelegate = self
+        
         self.present(customPopUpVC,animated: true, completion: nil)
+    }
+    
+    //MARK: - PopUpDelegate method
+    func fbBtClicked() {
+        print("ViewController - fbBtClicked")
+        let myChannelUrl = URL(string: "https://www.facebook.com/william.kim.5015")
+        self.myWebView.load(URLRequest(url:myChannelUrl!))
     }
 }
 

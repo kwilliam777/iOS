@@ -12,16 +12,21 @@ class CustomPopUpViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var bgBt: UIButton!
     @IBOutlet weak var learnMoreBt: UIButton!
+    @IBOutlet weak var facebookBt: UIButton!
     
     var learnMoreBtCompletionClosure: (() -> Void)?
+    var myPopUpDelegate: PopUpDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("check cpuvc")
         contentView.layer.cornerRadius=30
         learnMoreBt.layer.cornerRadius=10
+        facebookBt.layer.cornerRadius=10
     }
     
+    
+    //MARK: -IBActions
     @IBAction func onBgBtClicked(_ sender: UIButton) {
         print("onBgBtClicked")
         self.dismiss(animated: true, completion: nil)
@@ -37,4 +42,11 @@ class CustomPopUpViewController: UIViewController {
             learnMoreBtCompletionClosure()
         }
     }
+    
+    @IBAction func fbBtClicked(_ sender: UIButton) {
+        print("fbbtclicked")
+        myPopUpDelegate?.fbBtClicked()
+        self.dismiss(animated: true,completion: nil)
+    }
+    
 }
