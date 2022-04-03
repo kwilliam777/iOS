@@ -68,6 +68,7 @@
 			children = (
 				728DB1E127F923A70091E7D3 /* AppDelegate.swift */,
 				728DB1F927F927520091E7D3 /* CustomPopUpViewController.swift */,
+				728DB1FE27F93AD10091E7D3 /* PopUpDelegate.swift */,
 				728DB1E327F923A70091E7D3 /* SceneDelegate.swift */,
 				728DB1E527F923A70091E7D3 /* ViewController.swift */,
 				728DB1E727F923A70091E7D3 /* Main.storyboard */,
@@ -75,7 +76,6 @@
 				728DB1EA27F923A80091E7D3 /* Assets.xcassets */,
 				728DB1EC27F923A80091E7D3 /* LaunchScreen.storyboard */,
 				728DB1EF27F923A80091E7D3 /* Info.plist */,
-				728DB1FE27F93AD10091E7D3 /* PopUpDelegate.swift */,
 			);
 			path = CustomPopUp;
 			sourceTree = "<group>";

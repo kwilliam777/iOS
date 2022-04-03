@@ -13,6 +13,7 @@ class CustomPopUpViewController: UIViewController {
     @IBOutlet weak var bgBt: UIButton!
     @IBOutlet weak var learnMoreBt: UIButton!
     @IBOutlet weak var facebookBt: UIButton!
+    @IBOutlet weak var instaBt: UIButton!
     
     var learnMoreBtCompletionClosure: (() -> Void)?
     var myPopUpDelegate: PopUpDelegate?
@@ -23,10 +24,18 @@ class CustomPopUpViewController: UIViewController {
         contentView.layer.cornerRadius=30
         learnMoreBt.layer.cornerRadius=10
         facebookBt.layer.cornerRadius=10
+        instaBt.layer.cornerRadius=10
     }
     
     
     //MARK: -IBActions
+    
+    @IBAction func instaBtClicked(_ sender: UIButton) {
+        print("CustomPopUpViewController - instaBtClicked")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: notificationName), object: nil)
+        dismiss(animated: true,completion: nil)
+    }
+    
     @IBAction func onBgBtClicked(_ sender: UIButton) {
         print("onBgBtClicked")
         self.dismiss(animated: true, completion: nil)
