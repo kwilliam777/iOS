@@ -16,17 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lo8-SR-Luu">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lo8-SR-Luu" userLabel="Container">
+                                <rect key="frame" x="20" y="156" width="374" height="400"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="FYO-Oz-O3k">
+                                        <rect key="frame" x="112" y="10" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="4d1-E3-WNn"/>
+                                            <constraint firstAttribute="width" constant="150" id="w5W-cE-IBt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CRh-2A-1un">
+                                        <rect key="frame" x="112" y="176" width="150" height="32"/>
+                                        <segments>
+                                            <segment title="사진검색"/>
+                                            <segment title="사용자검색"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="searchFilterValChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="5xo-ZD-6zc"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <searchBar contentMode="redraw" placeholder="사진 키워드 입력" translatesAutoresizingMaskIntoConstraints="NO" id="6fZ-uO-3AW">
+                                        <rect key="frame" x="0.0" y="225" width="374" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sr-mx-sjM">
+                                        <rect key="frame" x="147" y="296" width="80" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="CxW-hS-vc2"/>
+                                            <constraint firstAttribute="height" constant="40" id="vBa-kq-IuM"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="검색"/>
+                                        <connections>
+                                            <action selector="onSearchBtClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bbn-iZ-IOU"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-7n-aBf">
+                                        <rect key="frame" x="177" y="306" width="20" height="20"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FYO-Oz-O3k" firstAttribute="trailing" secondItem="CRh-2A-1un" secondAttribute="trailing" id="AoQ-6k-apH"/>
+                                    <constraint firstAttribute="height" constant="400" id="BGe-EP-9bl"/>
+                                    <constraint firstAttribute="trailing" secondItem="6fZ-uO-3AW" secondAttribute="trailing" id="Vhi-1A-xFG"/>
+                                    <constraint firstItem="9Sr-mx-sjM" firstAttribute="centerX" secondItem="Lo8-SR-Luu" secondAttribute="centerX" id="WtB-O9-jd2"/>
+                                    <constraint firstItem="CRh-2A-1un" firstAttribute="top" secondItem="FYO-Oz-O3k" secondAttribute="bottom" constant="16" id="beG-9K-P3X"/>
+                                    <constraint firstItem="Ugd-7n-aBf" firstAttribute="centerX" secondItem="9Sr-mx-sjM" secondAttribute="centerX" id="cSO-iR-yIh"/>
+                                    <constraint firstItem="9Sr-mx-sjM" firstAttribute="top" secondItem="6fZ-uO-3AW" secondAttribute="bottom" constant="20" id="hcU-JF-80F"/>
+                                    <constraint firstItem="CRh-2A-1un" firstAttribute="leading" secondItem="FYO-Oz-O3k" secondAttribute="leading" id="k0U-N2-gf5"/>
+                                    <constraint firstItem="FYO-Oz-O3k" firstAttribute="centerX" secondItem="Lo8-SR-Luu" secondAttribute="centerX" id="lWZ-OK-gk5"/>
+                                    <constraint firstItem="Ugd-7n-aBf" firstAttribute="centerY" secondItem="9Sr-mx-sjM" secondAttribute="centerY" id="nem-Bz-n0K"/>
+                                    <constraint firstItem="6fZ-uO-3AW" firstAttribute="top" secondItem="CRh-2A-1un" secondAttribute="bottom" constant="18" id="s0b-NR-r3R"/>
+                                    <constraint firstItem="FYO-Oz-O3k" firstAttribute="top" secondItem="Lo8-SR-Luu" secondAttribute="top" constant="10" id="tLy-kp-22B"/>
+                                    <constraint firstItem="6fZ-uO-3AW" firstAttribute="leading" secondItem="Lo8-SR-Luu" secondAttribute="leading" id="wdt-V7-VO7"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="heT-pA-gag"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lo8-SR-Luu" firstAttribute="top" secondItem="heT-pA-gag" secondAttribute="top" constant="16" id="1zq-Ko-tX9"/>
+                            <constraint firstItem="Lo8-SR-Luu" firstAttribute="leading" secondItem="heT-pA-gag" secondAttribute="leading" constant="20" id="EGx-4R-j0e"/>
+                            <constraint firstItem="heT-pA-gag" firstAttribute="trailing" secondItem="Lo8-SR-Luu" secondAttribute="trailing" constant="20" id="agw-xo-vFt"/>
+                            <constraint firstItem="Lo8-SR-Luu" firstAttribute="centerX" secondItem="Sb5-AP-dIX" secondAttribute="centerX" id="vgb-Yp-x4H"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yal-X4-Wu7"/>
                     <connections>
+                        <outlet property="searchBar" destination="6fZ-uO-3AW" id="zab-7x-GwV"/>
+                        <outlet property="searchBt" destination="9Sr-mx-sjM" id="4g3-DN-X1P"/>
+                        <outlet property="searchFilterSegment" destination="CRh-2A-1un" id="ybm-YX-jCU"/>
+                        <outlet property="searchIndicator" destination="Ugd-7n-aBf" id="XMP-mD-6Io"/>
                         <segue destination="vei-ah-mHn" kind="show" identifier="goToUserListVC" id="ARy-ZY-CQY"/>
                         <segue destination="jay-HN-cnv" kind="show" identifier="goToPhotoCollectionVC" id="FeM-J9-IKv"/>
                     </connections>
@@ -87,11 +152,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="769" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
