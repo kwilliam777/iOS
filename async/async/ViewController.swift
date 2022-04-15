@@ -29,8 +29,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.title = "스토리보드 없이 시작하기"
-//        self.view.backgroundColor = .systemGray
-        
         
         view.addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -43,8 +41,6 @@ class ViewController: UIViewController {
             self.label.text = result
             self.notchGradientLoadingBar.fadeOut()
         })
-        
-        
     }
     
     fileprivate func load(completion: @escaping(String) -> ()) {

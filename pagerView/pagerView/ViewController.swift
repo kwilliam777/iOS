@@ -14,9 +14,7 @@ class ViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelega
 
     
     @IBOutlet weak var leftBt: UIButton!
-    
     @IBOutlet weak var rightBt: UIButton!
-    
     @IBOutlet weak var myPagerView: FSPagerView! {
         didSet{
             // 페이저뷰에 쎌을 등록한다
@@ -27,7 +25,6 @@ class ViewController: UIViewController, FSPagerViewDataSource, FSPagerViewDelega
             self.myPagerView.isInfinite = true
             // 자동 스크롤
             self.myPagerView.automaticSlidingInterval = 4.0
-            
         }
     }
     @IBOutlet weak var myPageControl: FSPageControl!{

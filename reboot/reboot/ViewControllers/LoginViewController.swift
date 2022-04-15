@@ -75,7 +75,7 @@ class LoginViewController: UIViewController,GADBannerViewDelegate {
             
 //            self.view.addSubview(self.titleLabel)
 //            self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
-//            self.titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//            self.titleLabel.centerXAnchor.constraint(equalTo: self.vi3ew.centerXAnchor).isActive = true
 //            self.titleLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
 //
 //            self.view.addSubview(self.secondLabel)

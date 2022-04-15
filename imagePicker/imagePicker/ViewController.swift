@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileChangeBt: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,15 +46,11 @@ class ViewController: UIViewController {
                 // 요기서 내 로직을 넣으면 됨
                 self.profileImage.image = photo.image
             }
-            
             // 선택 창 닫기
             picker.dismiss(animated: true, completion: nil)
         }
-        
         // 선택 창 열기
         present(picker, animated: true, completion: nil)
-        
     }
-    
 }
 

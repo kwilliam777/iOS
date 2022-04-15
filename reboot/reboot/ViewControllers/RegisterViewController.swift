@@ -23,5 +23,4 @@ class RegisterViewController: UIViewController {
         //네비게이션 뷰 컨트롤러를 팝한다
         self.navigationController?.popViewController(animated: true)
     }
-    
 }
