@@ -117,7 +117,7 @@
 		8EA20527ED50C604C87051454089590F /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		909866A9C13B8F5019A30CDF523938D6 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		97AECCA51230202DC2DB60D5229A66F9 /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Toast/Toast.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9ECB033A0571C4A412754A53A86DA78A /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		A22E13BB587924FB2896BEF131121DB9 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
 		A55405B4041EE4362616939E8CFE65CB /* Pods-unsplash_with_storyboard.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-unsplash_with_storyboard.modulemap"; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		CCE67BBDC7A78ACD4E7ACC505F1E3359 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		CD7424A65A135115E5C1E4FB97E9C59F /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
 		CE66D16849ABFC69362223BBFC812E87 /* Toast-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-Swift-umbrella.h"; sourceTree = "<group>"; };
-		CEA73F38184B7E67CCACDE4F26C9FFE0 /* Pods-unsplash_with_storyboard */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-unsplash_with_storyboard"; path = Pods_unsplash_with_storyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA73F38184B7E67CCACDE4F26C9FFE0 /* Pods_unsplash_with_storyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unsplash_with_storyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BD4AF910BD1F59A75D822CF42A1D5D /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
 		D35B54BD0F7D79AF432E90AA53C376A5 /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		D3A378E16F2D5225AA56F0DC784CDEEC /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				CEA73F38184B7E67CCACDE4F26C9FFE0 /* Pods-unsplash_with_storyboard */,
+				CEA73F38184B7E67CCACDE4F26C9FFE0 /* Pods_unsplash_with_storyboard.framework */,
 				D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast-Swift */,
 			);
 			name = Products;
@@ -309,7 +309,6 @@
 				9ECB033A0571C4A412754A53A86DA78A /* Validation.swift */,
 				A523D69A69AC7A8FEEE48FF49B93790E /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -328,7 +327,6 @@
 				97AECCA51230202DC2DB60D5229A66F9 /* Toast.swift */,
 				A19D9B253A55E0D69029D57245CF1155 /* Support Files */,
 			);
-			name = "Toast-Swift";
 			path = "Toast-Swift";
 			sourceTree = "<group>";
 		};
@@ -379,7 +377,7 @@
 			);
 			name = "Pods-unsplash_with_storyboard";
 			productName = Pods_unsplash_with_storyboard;
-			productReference = CEA73F38184B7E67CCACDE4F26C9FFE0 /* Pods-unsplash_with_storyboard */;
+			productReference = CEA73F38184B7E67CCACDE4F26C9FFE0 /* Pods_unsplash_with_storyboard.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B990BD87169C76A3ED3FE8A9258D91A3 /* Toast-Swift */ = {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		292A2050571B2ECB7FE7F38A /* Pods_unsplash_with_storyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 737209D8BC3BE417612F4F91 /* Pods_unsplash_with_storyboard.framework */; };
+		7224B64D280DFB2F00916186 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224B64C280DFB2F00916186 /* Photo.swift */; };
+		7224B64F280DFB7E00916186 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7224B64E280DFB7E00916186 /* MyError.swift */; };
 		722FD7A82808C44800DF2C73 /* MyLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD7A72808C44800DF2C73 /* MyLogger.swift */; };
 		722FD7AA2808C59300DF2C73 /* MyApiStatusLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD7A92808C59300DF2C73 /* MyApiStatusLogger.swift */; };
 		722FD7AC2808C62100DF2C73 /* MySearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722FD7AB2808C62100DF2C73 /* MySearchRouter.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7224B64C280DFB2F00916186 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7224B64E280DFB7E00916186 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		722FD7A72808C44800DF2C73 /* MyLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogger.swift; sourceTree = "<group>"; };
 		722FD7A92808C59300DF2C73 /* MyApiStatusLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApiStatusLogger.swift; sourceTree = "<group>"; };
 		722FD7AB2808C62100DF2C73 /* MySearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySearchRouter.swift; sourceTree = "<group>"; };
@@ -68,6 +72,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7224B64B280DFB2300916186 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7224B64C280DFB2F00916186 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7231165927FBCB7600FBB621 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,7 @@
 		7231166427FBCB7600FBB621 /* unsplash_with_storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				7224B64B280DFB2300916186 /* Model */,
 				72550CAF280619870046A9D1 /* API */,
 				72EE68AB27FF8FA2007B1035 /* Utils */,
 				7231166527FBCB7600FBB621 /* AppDelegate.swift */,
@@ -129,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				72EE68AC27FF8FB8007B1035 /* Constant.swift */,
+				7224B64E280DFB7E00916186 /* MyError.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -263,7 +277,9 @@
 				7231166827FBCB7600FBB621 /* SceneDelegate.swift in Sources */,
 				722FD7AC2808C62100DF2C73 /* MySearchRouter.swift in Sources */,
 				7231167A27FBCED000FBB621 /* UserListVC.swift in Sources */,
+				7224B64D280DFB2F00916186 /* Photo.swift in Sources */,
 				72550CB12806199B0046A9D1 /* MyAlamofireManager.swift in Sources */,
+				7224B64F280DFB7E00916186 /* MyError.swift in Sources */,
 				722FD7AA2808C59300DF2C73 /* MyApiStatusLogger.swift in Sources */,
 				7231167C27FBCF0100FBB621 /* PhotoCollectionVC.swift in Sources */,
 				722FD7A82808C44800DF2C73 /* MyLogger.swift in Sources */,

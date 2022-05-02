@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 final class MyAlamofireManager {
     // 싱글턴 적용
@@ -22,8 +23,24 @@ final class MyAlamofireManager {
     var session : Session
     
     private init(){
-        session = Session(interceptor: interceptors, eventMonitors: monitors)
+        session = Session(
+            interceptor: interceptors,
+            eventMonitors: monitors)
     }
     
-    
+    func getPhotos(searchTerm userInput: String, completion: @escaping (Result<[Photo],MyError>) -> Void) {
+        
+        print("MyAlamofireManager - getPhotos() called : \(userInput)")
+        
+        self.session
+            .request(MySearchRouter.searchPhotos(term: userInput))
+            .validate(statusCode: 200...400)
+            .responseJSON(completionHandler:  { response in
+                var photos = [Photo]()
+                let responseJson = JSON(response.value!)
+                
+                let jsonArray = responseJson["results"]
+                
+            })
+    }
 }

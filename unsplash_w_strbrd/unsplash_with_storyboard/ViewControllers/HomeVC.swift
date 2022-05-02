@@ -171,10 +171,6 @@ class HomeVC: BaseVC, UISearchBarDelegate, UIGestureRecognizerDelegate {
                     debugPrint(response)
                 })
         }
-        
-
-        
-        
         // 화면 이동
 //        pushVC()
     }
