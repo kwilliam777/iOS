@@ -40,7 +40,7 @@ final class MyAlamofireManager {
                 let responseJson = JSON(response.value!)
                 
                 let jsonArray = responseJson["results"]
-                
+                print("jsonArray.count : \(jsonArray.count)")
             })
     }
 }
