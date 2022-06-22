@@ -15,6 +15,9 @@ class CreditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func touchUpDismissBtn(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-nS-haN">
-                                <rect key="frame" x="330" y="35" width="472" height="317"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1bN-nS-haN">
+                                <rect key="frame" x="326.66666666666674" y="35" width="403.33333333333326" height="276.33333333333331"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Hello World!
 
@@ -33,24 +32,35 @@ github/kwilliam777</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC0-c7-NAe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC0-c7-NAe">
                                 <rect key="frame" x="59" y="20" width="72" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="chevron.compact.left" catalog="system" title="  back"/>
+                                <connections>
+                                    <action selector="touchUpDismissBtn:" destination="aIp-2t-5UO" eventType="touchUpInside" id="WVw-35-ze3"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="OvE-NW-1dc">
-                                <rect key="frame" x="60" y="93" width="235" height="201"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yagom_symbol" translatesAutoresizingMaskIntoConstraints="NO" id="OvE-NW-1dc">
+                                <rect key="frame" x="59.999999999999986" y="93.000000000000014" width="166.66666666666663" height="160.33333333333337"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3R2-M7-chw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OvE-NW-1dc" firstAttribute="top" secondItem="LC0-c7-NAe" secondAttribute="bottom" constant="42" id="1n1-14-pZd"/>
+                            <constraint firstItem="LC0-c7-NAe" firstAttribute="leading" secondItem="3R2-M7-chw" secondAttribute="leading" constant="15" id="O1x-hQ-E8I"/>
+                            <constraint firstItem="LC0-c7-NAe" firstAttribute="top" secondItem="3R2-M7-chw" secondAttribute="top" constant="20" id="fYX-da-koj"/>
+                            <constraint firstItem="1bN-nS-haN" firstAttribute="top" secondItem="3R2-M7-chw" secondAttribute="top" constant="35" id="lqv-vk-vRq"/>
+                            <constraint firstItem="1bN-nS-haN" firstAttribute="centerY" secondItem="OvE-NW-1dc" secondAttribute="centerY" id="ppJ-hJ-zok"/>
+                            <constraint firstItem="3R2-M7-chw" firstAttribute="trailing" secondItem="1bN-nS-haN" secondAttribute="trailing" constant="70" id="py7-lh-wer"/>
+                            <constraint firstItem="OvE-NW-1dc" firstAttribute="leading" secondItem="3R2-M7-chw" secondAttribute="leading" constant="16" id="uyl-bd-gJ9"/>
+                            <constraint firstItem="1bN-nS-haN" firstAttribute="leading" secondItem="OvE-NW-1dc" secondAttribute="trailing" constant="100" id="z0p-Py-X3q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1uH-Sr-m5d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1.4218009478672986" y="893.84615384615381"/>
+            <point key="canvasLocation" x="2" y="898"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -110,6 +120,9 @@ github/kwilliam777</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                     </preferredSymbolConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="aIp-2t-5UO" kind="presentation" modalTransitionStyle="crossDissolve" id="SbY-cU-VHm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uip-UO-zOd">
                                 <rect key="frame" x="411.33333333333331" y="124.66666666666667" width="21.666666666666686" height="25.333333333333329"/>
