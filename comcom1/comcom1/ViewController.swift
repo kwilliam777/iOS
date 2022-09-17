@@ -18,8 +18,10 @@ class ViewController: UIViewController {
     @IBAction func uiBtn(_ sender: Any) {
         if self.uiTitle.text=="첫번째 화면"{
             self.uiTitle.text = "Hello, World!"
-        } else {
+        } else if self.uiTitle.text == "Hello, World!" {
             self.uiTitle.text = "Bye, World!"
+        } else {
+            self.uiTitle.text = "첫번째 화면"
         }
     }
     
