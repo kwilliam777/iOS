@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var uiTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func uiBtn(_ sender: Any) {
+        if self.uiTitle.text=="첫번째 화면"{
+            self.uiTitle.text = "Hello, World!"
+        } else {
+            self.uiTitle.text = "Bye, World!"
+        }
+    }
+    
 }
 
