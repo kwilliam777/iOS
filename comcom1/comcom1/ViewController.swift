@@ -14,6 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    @IBOutlet var l1: UILabel!
+    @IBOutlet var l2: UILabel!
+    @IBOutlet var l3: UILabel!
+    @IBOutlet var l4: UILabel!
+    @IBOutlet var l5: UILabel!
+    
+    
+    @IBAction func bt1(_ sender: Any) {
+    }
+    
+    
+    
+    
     
     @IBAction func uiBtn(_ sender: Any) {
         if self.uiTitle.text=="첫번째 화면"{
@@ -24,6 +37,5 @@ class ViewController: UIViewController {
             self.uiTitle.text = "첫번째 화면"
         }
     }
-    
 }
 
