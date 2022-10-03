@@ -14,19 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBOutlet var l1: UILabel!
-    @IBOutlet var l2: UILabel!
-    @IBOutlet var l3: UILabel!
-    @IBOutlet var l4: UILabel!
-    @IBOutlet var l5: UILabel!
     
-    
-    @IBAction func bt1(_ sender: Any) {
+    @IBAction func moveNext(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let uvc = storyboard.instantiateViewController(withIdentifier: "SecondVC")
+        uvc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        self.present(uvc,animated: true)
     }
-    
-    
-    
-    
     
     @IBAction func uiBtn(_ sender: Any) {
         if self.uiTitle.text=="첫번째 화면"{
