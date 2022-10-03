@@ -12,7 +12,7 @@ class SecondVC : UIViewController {
         super.viewDidLoad()
     }
     @IBAction func btClicked(_ sender:Any) {
-        dismiss(animated: true)
+        self.presentingViewController?.dismiss(animated: true)
         
     }
 }
