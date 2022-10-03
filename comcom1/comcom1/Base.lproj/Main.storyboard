@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="72.51908396946564" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--SecondVC-->
         <scene sceneID="9f1-Xt-Nx2">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" id="w5q-VK-1IM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" id="w5q-VK-1IM" customClass="SecondVC" customModule="comcom1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BtV-d9-lQ1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +85,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vx9-by-E0p">
+                                <rect key="frame" x="140" y="372" width="113" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="뒤로가기"/>
+                                <connections>
+                                    <action selector="btClicked:" destination="w5q-VK-1IM" eventType="touchUpInside" id="1qX-HX-cNj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vTV-GX-5zT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

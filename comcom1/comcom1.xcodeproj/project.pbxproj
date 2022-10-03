@@ -14,6 +14,7 @@
 		720B902D28B4CB96003219C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 720B902C28B4CB96003219C8 /* Assets.xcassets */; };
 		720B903028B4CB96003219C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 720B902E28B4CB96003219C8 /* LaunchScreen.storyboard */; };
 		7264053C28D5C3A100A2D369 /* Launch Screen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7264053B28D5C3A100A2D369 /* Launch Screen2.storyboard */; };
+		72A03B1428EB19C9007F8BB1 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A03B1328EB19C9007F8BB1 /* SecondVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		720B902F28B4CB96003219C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		720B903128B4CB96003219C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7264053B28D5C3A100A2D369 /* Launch Screen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen2.storyboard"; sourceTree = "<group>"; };
+		72A03B1328EB19C9007F8BB1 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				720B902328B4CB92003219C8 /* AppDelegate.swift */,
 				720B902528B4CB92003219C8 /* SceneDelegate.swift */,
 				720B902728B4CB92003219C8 /* ViewController.swift */,
+				72A03B1328EB19C9007F8BB1 /* SecondVC.swift */,
 				720B902928B4CB92003219C8 /* Main.storyboard */,
 				720B902C28B4CB96003219C8 /* Assets.xcassets */,
 				720B902E28B4CB96003219C8 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			files = (
 				720B902828B4CB92003219C8 /* ViewController.swift in Sources */,
 				720B902428B4CB92003219C8 /* AppDelegate.swift in Sources */,
+				72A03B1428EB19C9007F8BB1 /* SecondVC.swift in Sources */,
 				720B902628B4CB92003219C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
