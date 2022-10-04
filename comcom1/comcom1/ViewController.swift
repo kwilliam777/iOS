@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
     //코드상으로 화면 전환하기
     @IBAction func moveNext(_ sender: Any) {
 //        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "NavSecondVC") else { return }
         self.navigationController?.pushViewController(uvc, animated: true)
     }
+    //메뉴얼 세그로 화면 전환하기
+    @IBAction func wind(_ sender: Any) {
+        self.performSegue(withIdentifier: "ManualWind", sender: self)
+    }
     
     @IBAction func uiBtn(_ sender: Any) {
         if self.uiTitle.text=="첫번째 화면"{
@@ -38,5 +42,6 @@ class ViewController: UIViewController {
             self.uiTitle.text = "첫번째 화면"
         }
     }
+    
 }
 
