@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "ManualWind", sender: self)
     }
     
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
+    }
+    
     @IBAction func uiBtn(_ sender: Any) {
         if self.uiTitle.text=="첫번째 화면"{
             self.uiTitle.text = "Hello, World!"
