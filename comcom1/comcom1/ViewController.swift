@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        NSLog("\(segue.identifier!)세그웨이가 곧 실행됩니다.")
+    }
+    
     //코드상으로 화면 전환하기
     @IBAction func moveNext(_ sender: Any) {
 //        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)

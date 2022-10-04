@@ -202,6 +202,31 @@
                                     <segue destination="Iz4-E5-Z9q" kind="presentation" id="u0O-SH-ReU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6K-Xs-agz">
+                                <rect key="frame" x="78" y="608" width="102" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic2-5C-0A6">
+                                <rect key="frame" x="256" y="601" width="73" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="마지막!"/>
+                                <connections>
+                                    <segue destination="oBd-Cz-XmW" kind="custom" identifier="&quot;custom&quot;" customClass="NewSegue" customModule="comcom1" customModuleProvider="target" id="iNz-RJ-Cvt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FE-W3-o8c">
+                                <rect key="frame" x="253" y="630" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="마지막2"/>
+                                <connections>
+                                    <segue destination="oBd-Cz-XmW" kind="presentation" identifier="&quot;action&quot;" id="YiA-bg-qcd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -261,6 +286,31 @@
                 <exit id="VJ2-jn-u0z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2481.679389312977" y="719.71830985915494"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6yd-7a-oJq">
+            <objects>
+                <viewController id="oBd-Cz-XmW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="STj-Qb-Nzw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom segue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EJ-Xj-qE3">
+                                <rect key="frame" x="121" y="202" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wlW-oK-urg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UHV-4L-3Gq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WHg-go-J3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3234.3511450381679" y="719.71830985915494"/>
         </scene>
         <!--Title-->
         <scene sceneID="2aI-Pf-vuC">
@@ -448,6 +498,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Zld-nP-JXU"/>
+        <segue reference="iNz-RJ-Cvt"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
