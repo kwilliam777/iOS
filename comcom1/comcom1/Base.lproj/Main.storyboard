@@ -91,11 +91,32 @@
                                     <action selector="moveNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rER-Ce-P0O"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="세그웨이 화면 전환" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCS-kR-qbe">
+                                <rect key="frame" x="56" y="447" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGj-yH-gRL">
+                                <rect key="frame" x="263" y="433" width="59" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="이동!"/>
+                                <connections>
+                                    <segue destination="Sr2-vx-3EI" kind="presentation" id="Zld-nP-JXU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="first" id="8Sx-h5-DMi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="63e-Da-26c">
+                            <connections>
+                                <segue destination="Sr2-vx-3EI" kind="show" id="2T8-es-KF4"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="play" id="EpT-Lg-EK0">
                             <connections>
                                 <action selector="moveByNav:" destination="BYZ-38-t0r" id="a5G-wa-MGg"/>
@@ -109,6 +130,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="999.23664122137404" y="-34.507042253521128"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2aI-Pf-vuC">
+            <objects>
+                <viewController id="Sr2-vx-3EI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OlK-JM-g64">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="세그웨이 두번째화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM0-ul-RRq">
+                                <rect key="frame" x="95" y="174" width="202" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bEq-Ay-qV6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PV4-N7-Idh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DM0-MS-kb5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="656"/>
         </scene>
         <!--SecondVC-->
         <scene sceneID="9f1-Xt-Nx2">
@@ -243,6 +289,9 @@
             <point key="canvasLocation" x="72.51908396946564" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zld-nP-JXU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
