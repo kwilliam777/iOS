@@ -37,15 +37,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7y6-td-QXQ">
-                                <rect key="frame" x="105" y="203" width="241" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                <connections>
-                                    <action selector="email:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="1kD-7B-ChK"/>
-                                </connections>
-                            </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z23-h8-BST">
                                 <rect key="frame" x="297" y="262" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,13 +70,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3p-CL-Lqw"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-sy-Sxv">
+                                <rect key="frame" x="105" y="203" width="241" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="email" destination="7y6-td-QXQ" id="mh9-Ne-VhP"/>
+                        <outlet property="email" destination="UPG-sy-Sxv" id="gUm-H9-3vM"/>
                         <outlet property="interval" destination="xB9-TE-ikF" id="fka-eo-e2l"/>
                         <outlet property="intervalTxt" destination="oGi-M4-fm4" id="dAa-4k-iXr"/>
                         <outlet property="isUpdate" destination="z23-h8-BST" id="qlQ-43-cPk"/>
@@ -151,15 +151,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="onBack:" destination="33o-Ik-mHt" eventType="touchUpInside" id="ENy-jP-GJF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rfc-jT-KIs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="result" destination="abg-k1-cmD" id="YVs-bR-YBq"/>
                         <outlet property="resultEmail" destination="maV-gD-e3w" id="G9Q-hV-C5S"/>
                         <outlet property="resultInterval" destination="h7s-qn-hHH" id="taH-iO-keB"/>
+                        <outlet property="resultUpdate" destination="abg-k1-cmD" id="iUv-IX-yh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6NH-uE-vRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
