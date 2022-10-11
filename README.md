@@ -9,3 +9,4 @@ STUDY IOS
 5. URL
 6. QR
 7.
+ 
