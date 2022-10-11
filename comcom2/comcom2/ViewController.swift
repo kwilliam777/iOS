@@ -31,8 +31,11 @@ class ViewController: UIViewController {
         rvc.paramEmail = self.email.text!
         rvc.paramUpdate = self.isUpdate.isOn
         rvc.paramInterval = self.interval.value
+//        버튼으로 이동할 경우
+//        self.present(rvc,animated: true)
         
-        self.present(rvc,animated: true)
+//        네비게이션바로 이동할 경우
+        self.navigationController?.pushViewController(rvc, animated: true)
     }
     
 }
