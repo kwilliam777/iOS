@@ -25,6 +25,24 @@ class ViewController: UIViewController {
         let value = Int(sender.value)
         self.intervalTxt.text = "\(value)분 마다"
     }
+    
+    //세그웨이로 값을 보낼 때
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination
+        guard let rvc = dest as? ResultViewController else { return }
+        rvc.paramEmail = self.email.text!
+        rvc.paramUpdate = self.isUpdate.isOn
+        rvc.paramInterval = self.interval.value
+        
+    }
+    
+    @IBAction func onPerformSegue(_ sender: Any) {
+        self.performSegue(withIdentifier: "ManualSubmit", sender: self)
+    }
+    
+    
+    
+    //버튼으로 값을 보낼 때
     @IBAction func onSubmit(_ sender: Any) {
         guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "RVC") as? ResultViewController else { return }
         
