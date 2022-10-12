@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ahx-OU-3gc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -71,17 +71,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reM-yY-dI1">
+                                <rect key="frame" x="166" y="418" width="60" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PDt-wd-kne"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Setting" id="EhY-Se-92F">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Z3F-aM-oBo">
+                    <toolbarItems>
+                        <barButtonItem systemItem="action" id="Z3F-aM-oBo">
                             <connections>
                                 <action selector="onPerformSegue:" destination="BYZ-38-t0r" id="Mth-2x-qiR"/>
                             </connections>
                         </barButtonItem>
-                    </navigationItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Setting" id="EhY-Se-92F"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="email" destination="UPG-sy-Sxv" id="gUm-H9-3vM"/>
                         <outlet property="interval" destination="xB9-TE-ikF" id="fka-eo-e2l"/>
@@ -202,7 +213,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="register"/>
                                 <connections>
-                                    <action selector="onBack:" destination="33o-Ik-mHt" eventType="touchUpInside" id="NOt-8Z-6Yp"/>
+                                    <segue destination="I2P-Pa-nBh" kind="presentation" id="3X4-zi-D3d"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,7 +224,7 @@
                     <connections>
                         <outlet property="resultEmail" destination="maV-gD-e3w" id="G9Q-hV-C5S"/>
                         <outlet property="resultEmail2" destination="PcU-ok-KMq" id="sfS-Gm-mUS"/>
-                        <outlet property="resultInterval" destination="0Zr-iP-AnL" id="Ybz-Ur-S7y"/>
+                        <outlet property="resultInterval" destination="h7s-qn-hHH" id="diU-dB-rhK"/>
                         <outlet property="resultInterval2" destination="0Zr-iP-AnL" id="4eV-Sj-1X5"/>
                         <outlet property="resultUpdate" destination="abg-k1-cmD" id="iUv-IX-yh9"/>
                         <outlet property="resultUpdate2" destination="P6f-JP-uVI" id="mDJ-ux-AWo"/>
@@ -228,7 +239,7 @@
             <objects>
                 <viewController id="I2P-Pa-nBh" customClass="FormViewController" customModule="comcom2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T23-En-cKW">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbS-8y-AGm">
@@ -277,33 +288,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="I2P-Pa-nBh" eventType="touchUpInside" id="GfH-1b-TH4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q09-zH-9nG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="hGG-d2-c8F" id="3tc-Mc-9gm"/>
+                        <outlet property="interval" destination="mXe-Eu-vsv" id="VpU-QZ-dSE"/>
+                        <outlet property="isUpdate" destination="hdB-lz-E2x" id="4ZK-Xk-Udt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiB-Zj-TPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2571" y="4"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Z7w-KM-Luc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ahx-OU-3gc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zgo-mU-3YW">
-                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CPK-6p-QIv"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K8f-wt-AHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="297" y="4"/>
         </scene>
     </scenes>
     <resources>
