@@ -14,19 +14,31 @@ class FormViewController: UIViewController {
     
 
     @IBAction func onSubmit(_ sender: Any) {
-        print("1")
-        let preVC = self.presentingViewController
-        print("2")
-        guard let vc = preVC as? ResultViewController else {
-            print("3")
-            print(type(of:preVC as? ResultViewController))
-            return
-        }
-        print("4")
-        vc.paramEmail2 = self.email.text
-        vc.paramUpdate2 = self.isUpdate.isOn
-        vc.paramInterval2 = self.interval.value
-        print(vc.paramEmail2,vc.paramUpdate2,vc.paramInterval2)
+          //동기방식
+//        let preVC = self.presentingViewController
+//        guard let vc = preVC as? ResultViewController else {
+//            print(type(of:preVC as? ResultViewController))
+//            return
+//        }
+//        vc.paramEmail2 = self.email.text
+//        vc.paramUpdate2 = self.isUpdate.isOn
+//        vc.paramInterval2 = self.interval.value
+//        print(vc.paramEmail2,vc.paramUpdate2,vc.paramInterval2)
+        
+        //비동기 방식 - app delegate
+//        let ad = UIApplication.shared.delegate as? AppDelegate
+//
+//        ad?.paramEmail = self.email.text
+//        ad?.paramUpdate = self.isUpdate.isOn
+//        ad?.paramInterval = self.interval.value
+
+        //비동기 방식 - UserDefaults
+        let ud = UserDefaults.standard
+        
+        ud.set(self.email.text, forKey: "email")
+        ud.set(self.isUpdate.isOn, forKey: "isUpdate")
+        ud.set(self.interval.value, forKey: "interval")
+        
         self.presentingViewController?.dismiss(animated: true)
     }
 }

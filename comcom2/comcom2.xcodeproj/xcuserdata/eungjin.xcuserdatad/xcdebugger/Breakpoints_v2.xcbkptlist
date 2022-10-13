@@ -20,5 +20,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DED92E1-4B33-4FFB-8D24-D0035A81EA39"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "comcom2/ResultViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "ResultViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6DED92E1-4B33-4FFB-8D24-D0035A81EA39 - 1ce5e64529b8d0e9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "comcom2.ResultViewController.paramEmail2.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "comcom2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/comcom2/comcom2/ResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "6DED92E1-4B33-4FFB-8D24-D0035A81EA39 - e350e4c6f70560e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "comcom2.ResultViewController.paramEmail2.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "comcom2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/comcom2/comcom2/ResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "6DED92E1-4B33-4FFB-8D24-D0035A81EA39 - 48a4d19a2aa0b4ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "comcom2.ResultViewController.paramEmail2.modify : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "comcom2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/comcom2/comcom2/ResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "6DED92E1-4B33-4FFB-8D24-D0035A81EA39 - 1bd4e2fc894b5b84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "comcom2.ResultViewController.paramEmail2.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "comcom2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/comcom2/comcom2/ResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "6DED92E1-4B33-4FFB-8D24-D0035A81EA39 - 6155e7701ee39d79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "comcom2.ResultViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; comcom2.ResultViewController"
+                  moduleName = "comcom2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/comcom2/comcom2/ResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "6DED92E1-4B33-4FFB-8D24-D0035A81EA39 - e49d7c40e7ee0ef2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "comcom2.ResultViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;comcom2.ResultViewController&gt;"
+                  moduleName = "comcom2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eungjin/Desktop/Eungjin/Dev/iOS/comcom2/comcom2/ResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "416">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

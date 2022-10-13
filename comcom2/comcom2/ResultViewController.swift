@@ -20,9 +20,10 @@ class ResultViewController: UIViewController {
     @IBOutlet var resultUpdate2: UILabel!
     @IBOutlet var resultInterval2: UILabel!
     
-    var paramEmail2: String?
-    var paramUpdate2: Bool?
-    var paramInterval2: Double?
+    //동기방식
+//    var paramEmail2: String? = "None"
+//    var paramUpdate2: Bool? = false
+//    var paramInterval2: Double? = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +32,43 @@ class ResultViewController: UIViewController {
         self.resultInterval.text = "\(Int(paramInterval))분 마다 갱신"
     }
     override func viewWillAppear(_ animated: Bool) {
-        if let email = paramEmail2 {
+        //동기방식
+//        if let email = paramEmail2 {
+//            resultEmail2.text = email
+//        }
+//        if let update = paramUpdate2 {
+//            resultUpdate2.text = update == true ? "자동갱신":"자동갱신안함"
+//        }
+//        if let interval = paramInterval2 {
+//            resultInterval2.text = "\(Int(interval))분마다"
+//        }
+        
+        //비동기 방식 - appdelegate
+//        let ad = UIApplication.shared.delegate as? AppDelegate
+//
+//        if let email = ad?.paramEmail{
+//            resultEmail2.text = email
+//        }
+//        if let update = ad?.paramUpdate{
+//            resultUpdate2.text = update == true ? "자동갱신" : "자동갱신안함"
+//        }
+//        if let interval = ad?.paramInterval{
+//            resultInterval2.text = "\(Int(interval))분마다"
+//        }
+        
+        //비동기 방식 - UserDefault
+        let ud = UserDefaults.standard
+        
+        if let email = ud.string(forKey: "email") {
+            print(email)
             resultEmail2.text = email
         }
-        if let update = paramUpdate2 {
-            resultUpdate2.text = update == true ? "자동갱신":"자동갱신안합"
-        }
-        if let interval = paramInterval2 {
-            resultInterval2.text = "\(Int(interval))분마다"
-        }
+        let update = ud.bool(forKey: "isUpdate")
+        print(update)
+        resultUpdate2.text = (update == true ? "자동갱신":"자동갱신안함")
+        let interval = ud.double(forKey: "interval")
+        print(interval)
+        resultInterval2.text = "\(Int(interval))분마다"
     }
     
     
