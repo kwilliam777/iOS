@@ -32,7 +32,7 @@ class ResultViewController: UIViewController {
         self.resultInterval.text = "\(Int(paramInterval))분 마다 갱신"
     }
     override func viewWillAppear(_ animated: Bool) {
-        //동기방식
+        //동기방식 - 화면이 메모리에서 해제 되면 데이터도 삭제
 //        if let email = paramEmail2 {
 //            resultEmail2.text = email
 //        }
@@ -43,7 +43,7 @@ class ResultViewController: UIViewController {
 //            resultInterval2.text = "\(Int(interval))분마다"
 //        }
         
-        //비동기 방식 - appdelegate
+        //비동기 방식 - appdelegate - 앱이 종료되기 전까지는 데이저 삭제되지 않음
 //        let ad = UIApplication.shared.delegate as? AppDelegate
 //
 //        if let email = ad?.paramEmail{
@@ -56,7 +56,7 @@ class ResultViewController: UIViewController {
 //            resultInterval2.text = "\(Int(interval))분마다"
 //        }
         
-        //비동기 방식 - UserDefault
+        //비동기 방식 - UserDefault - 앱이 삭제되기 전까지는 데이터 삭제되지 않음
         let ud = UserDefaults.standard
         
         if let email = ud.string(forKey: "email") {

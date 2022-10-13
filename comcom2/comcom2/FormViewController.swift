@@ -14,7 +14,7 @@ class FormViewController: UIViewController {
     
 
     @IBAction func onSubmit(_ sender: Any) {
-          //동기방식
+          //동기방식 - 화면이 메모리에서 삭제되면 데이터도 삭제됨
 //        let preVC = self.presentingViewController
 //        guard let vc = preVC as? ResultViewController else {
 //            print(type(of:preVC as? ResultViewController))
@@ -25,14 +25,14 @@ class FormViewController: UIViewController {
 //        vc.paramInterval2 = self.interval.value
 //        print(vc.paramEmail2,vc.paramUpdate2,vc.paramInterval2)
         
-        //비동기 방식 - app delegate
+        //비동기 방식 - app delegate - 앱이 종료되면 데이터도 삭제됨
 //        let ad = UIApplication.shared.delegate as? AppDelegate
 //
 //        ad?.paramEmail = self.email.text
 //        ad?.paramUpdate = self.isUpdate.isOn
 //        ad?.paramInterval = self.interval.value
 
-        //비동기 방식 - UserDefaults
+        //비동기 방식 - UserDefaults - 앱이 삭제되면 데이터도 삭제됨
         let ud = UserDefaults.standard
         
         ud.set(self.email.text, forKey: "email")
