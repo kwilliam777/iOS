@@ -11,8 +11,8 @@ class FormViewController: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var isUpdate: UISwitch!
     @IBOutlet var interval: UIStepper!
+    @IBOutlet var result: UILabel!
     
-
     @IBAction func onSubmit(_ sender: Any) {
           //동기방식 - 화면이 메모리에서 삭제되면 데이터도 삭제됨
 //        let preVC = self.presentingViewController
@@ -41,4 +41,17 @@ class FormViewController: UIViewController {
         
         self.presentingViewController?.dismiss(animated: true)
     }
+    
+    @IBAction func alert(_ sender: Any) {
+        let alert = UIAlertController(title: "선택", message: "항목을 선택해주세요", preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(cancel)
+        
+        self.present(alert, animated: true)
+    }
+    
+    
+    
 }
