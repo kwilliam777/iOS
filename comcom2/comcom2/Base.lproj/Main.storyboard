@@ -300,12 +300,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qd-OT-nbJ">
-                                <rect key="frame" x="146" y="565" width="102" height="35"/>
+                                <rect key="frame" x="144" y="532" width="102" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="알림창 실행"/>
                                 <connections>
                                     <action selector="alert:" destination="I2P-Pa-nBh" eventType="touchUpInside" id="iE0-sp-f8T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNs-CH-eCR">
+                                <rect key="frame" x="161" y="603" width="69" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                <connections>
+                                    <action selector="login:" destination="I2P-Pa-nBh" eventType="touchUpInside" id="WhD-nT-HVD"/>
                                 </connections>
                             </button>
                         </subviews>
