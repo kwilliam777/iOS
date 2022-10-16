@@ -8,4 +8,4 @@ STUDY IOS
 4. TOGGLE
 5. URL
 6. QR
-7.
+7. 
