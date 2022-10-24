@@ -14,8 +14,8 @@
             filePath = "comcom2/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "onStepper(_:)"
             landmarkType = "7">
          </BreakpointContent>
