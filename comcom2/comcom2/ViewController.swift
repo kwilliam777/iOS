@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     @IBOutlet var email: UITextField!
@@ -13,6 +14,40 @@ class ViewController: UIViewController {
     @IBOutlet var interval: UIStepper!
     @IBOutlet var isUpdateTxt: UILabel!
     @IBOutlet var intervalTxt: UILabel!
+    
+    
+    @IBOutlet var datepicker: UIDatePicker!
+    @IBOutlet var msg: UITextField!
+    
+    @IBAction func save(_ sender: Any) {
+        if #available(iOS 10.0, *){
+            UNUserNotificationCenter.current().getNotificationSettings { settings in
+                if settings.authorizationStatus == UNAuthorizationStatus.authorized {
+                    print("auth")
+                    let nContent = UNMutableNotificationContent()
+                    nContent.body = (self.msg.text)!
+                    nContent.title = "미리알림"
+                    nContent.sound = UNNotificationSound.default
+                    
+                    let time = self.datepicker.date.timeIntervalSinceNow
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
+                    let request = UNNotificationRequest(identifier: "alarm", content: nContent, trigger: trigger)
+                    UNUserNotificationCenter.current().add(request)
+                } else {
+                    let alert = UIAlertController(title: "알림등록", message: "알림이 허용되어있지 않습니다 ", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "확인", style: .default)
+                    alert.addAction(ok)
+                    
+                    self.present(alert,animated: true)
+                    return
+                }
+            }
+        } else {
+            
+        }
+    }
+    
+    
     
     @IBAction func onSwitch(_ sender: UISwitch) {
         if (sender.isOn == true) {
