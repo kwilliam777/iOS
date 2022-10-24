@@ -10,7 +10,7 @@ import UserNotifications
 
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var paramEmail : String?
     var paramUpdate : Bool?
     var paramInterval : Double?
@@ -21,12 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //경고창, 배지, 사운드를 사용하는 알림환경정보를 생성하고, 사용자 동의 여부 창을 실행
             let notiCenter = UNUserNotificationCenter.current()
             notiCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (didAllow, e) in }
+            notiCenter.delegate = self
         } else {
             print("else")
+            let setting = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
+            application.registerUserNotificationSettings(setting)
         }
-        
         // Override point for customization after application launch.
-        
         return true
     }
 
@@ -63,11 +64,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     UNUserNotificationCenter.current ().add(request)
                 } else {
                     print (" 사용자가 동의하지 않음!!!")
+                    let setting = application.currentUserNotificationSettings
+                    guard setting?.types != Optional.none else {
+                        print("Can't Schedule")
+                        return
+                    }
+                    
+                    let noti = UILocalNotification()
+                    noti.fireDate = Date(timeIntervalSinceNow: 10)
+                    noti.timeZone = TimeZone.autoupdatingCurrent
+                    noti.alertBody = "얼른다시 접속하세요!!"
+                    noti.alertAction = "학습하기"
+                    noti.applicationIconBadgeNumber = 1
+                    noti.soundName = UILocalNotificationDefaultSoundName
+                    noti.userInfo = ["name": "홍길동"]
+                    
+                    application.scheduleLocalNotification(noti)
                 }
             }
         } else {
             print("9 or less")
         }
     }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if notification.request.identifier == "wakeup" {
+            let userInfo = notification.request.content.userInfo
+            print(userInfo["name"]!)
+        }
+        completionHandler([.alert,.badge,.sound])
+    }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.notification.request.identifier == "wakeup" {
+            let userInfo = response.notification.request.content.userInfo
+            print(userInfo["name"]!)
+        }
+        completionHandler()
+    }
+    
 }
 
