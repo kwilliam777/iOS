@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var tf: UITextField!
     
     override func viewDidLoad() {
@@ -26,6 +26,9 @@ class ViewController: UIViewController {
         self.tf.layer.borderWidth = 2.0
         
         self.tf.becomeFirstResponder()
+        
+        self.tf.delegate = self
+        
     }
 
     @IBAction func confirm(_ sender: Any) {
