@@ -30,6 +30,48 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.tf.delegate = self
         
     }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("text editing will be started")
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("text editing started")
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("text field text will be cleared")
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if Int(string)==nil{
+            if (textField.text?.count)! + string.count>10 {
+                return false
+            } else {
+                return true
+            }
+        } else {
+            return false
+        }
+        print("text filed context will be changed to \(string)")
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("text field return bt clicked")
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("text field editing will be ended")
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("text field editing ended")
+    }
 
     @IBAction func confirm(_ sender: Any) {
         self.tf.resignFirstResponder()
